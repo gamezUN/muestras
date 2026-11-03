@@ -3,33 +3,295 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="MMA Fighters: conoce disciplinas, horarios y planes de entrenamiento.">
-<title>MMA Fighters | Training Center</title>
+<meta name="theme-color" content="#090909">
+<meta name="description" content="MMA Fighters — Entrena fuerte. Evoluciona siempre.">
+<title>MMA FIGHTERS — Train Beyond Limits</title>
 <style>
-:root{--bg:#090a0d;--panel:#151820;--text:#f5f5f7;--muted:#aeb3bd;--red:#e32936;--line:#ffffff1a;--max:1160px}
-*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}a{text-decoration:none;color:inherit}.wrap{width:min(92%,var(--max));margin:auto}
-header{position:sticky;top:0;z-index:5;background:#090a0df2;backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{font-weight:900;letter-spacing:.08em}.brand b{display:inline-grid;place-items:center;background:var(--red);padding:8px 12px;margin-right:9px}.brand small{display:block;color:var(--muted);font-size:.62rem;letter-spacing:.3em;margin-left:52px}.links{display:flex;gap:25px;color:#d7d8dd;font-size:.9rem}.btn{display:inline-block;background:var(--red);border:1px solid var(--red);color:white;padding:12px 19px;font-weight:800;border-radius:3px;transition:.2s}.btn:hover{background:#b91e29;transform:translateY(-2px)}.outline{background:transparent;border-color:#ffffff66}.hero{min-height:620px;display:flex;align-items:center;background:linear-gradient(90deg,#07080af2 0%,#07080acb 50%,#07080a55),url('https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?auto=format&fit=crop&w=1900&q=85') center/cover}.hero-copy{max-width:700px;padding:90px 0}.eyebrow{color:#ff6872;font-weight:900;letter-spacing:.22em;font-size:.76rem;text-transform:uppercase;margin-bottom:15px}h1{font-size:clamp(3.2rem,8vw,6.6rem);line-height:.94;letter-spacing:-.06em;text-transform:uppercase}h1 span,.red{color:var(--red)}.hero p{max-width:580px;color:#d1d3d9;margin:25px 0 30px;font-size:1.08rem}.actions{display:flex;gap:12px;flex-wrap:wrap}section{padding:82px 0}.head{max-width:700px;margin-bottom:35px}.head h2,.about h2,.cta h2{font-size:clamp(2rem,5vw,3.5rem);line-height:1.05;text-transform:uppercase;letter-spacing:-.04em}.head p,.about p{color:var(--muted);margin-top:13px}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.discipline{min-height:285px;padding:25px;display:flex;flex-direction:column;justify-content:flex-end;background:linear-gradient(0deg,#000e,#0002),var(--photo) center/cover;border:1px solid var(--line)}.discipline h3{font-size:1.6rem;text-transform:uppercase}.discipline p{color:#d0d2d8;font-size:.9rem}.about{background:var(--panel)}.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:center}.about-photo{min-height:390px;background:url('https://images.unsplash.com/photo-1517438322307-e67111335449?auto=format&fit=crop&w=1100&q=85') center/cover}.ticks{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:24px 0}.ticks span:before{content:'✓';color:var(--red);font-weight:bold;margin-right:9px}.schedule article,.plan{background:var(--panel);border:1px solid var(--line);padding:24px}.schedule h3,.plan h3{text-transform:uppercase}.schedule p,.plan p{color:var(--muted);font-size:.9rem}.line{display:flex;justify-content:space-between;border-top:1px solid var(--line);padding-top:10px;margin-top:12px;font-size:.9rem}.plans{background:#10131a}.plan .price{font-size:2.4rem;font-weight:900;margin:12px 0}.plan ul{list-style:none;margin:20px 0}.plan li{padding:8px 0;border-bottom:1px solid var(--line);font-size:.9rem;color:#ddd}.plan li:before{content:'✓';color:var(--red);margin-right:8px}.plan .btn{width:100%;text-align:center}.featured{border-color:var(--red)}.label{display:inline-block;background:var(--red);padding:4px 9px;font-size:.7rem;font-weight:bold;margin-bottom:12px}.cta{text-align:center;background:linear-gradient(#07080acc,#07080acc),url('https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=1600&q=85') center/cover}.cta p{color:#d2d4da;max-width:600px;margin:15px auto 25px}.contact{display:grid;grid-template-columns:1fr 1fr;gap:20px}.contact article{background:var(--panel);border:1px solid var(--line);padding:25px}.contact p{color:var(--muted);margin:8px 0}.map{min-height:220px;display:grid;place-items:center;text-align:center;border:1px dashed #ffffff55;color:var(--muted);padding:20px}footer{border-top:1px solid var(--line);padding:25px 0;color:var(--muted);font-size:.82rem}.note{font-size:.76rem;color:#9298a4;margin-top:18px}
-@media(max-width:800px){.links{display:none}.cards{grid-template-columns:1fr 1fr}.about-grid{grid-template-columns:1fr}.about-photo{min-height:300px}}
-@media(max-width:560px){.cards,.contact{grid-template-columns:1fr}section{padding:62px 0}.hero{min-height:560px}.ticks{grid-template-columns:1fr}nav>.btn{padding:10px 12px;font-size:.8rem}}
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap');
+:root{--red:#f32635;--red2:#a80d1b;--black:#08090b;--panel:#111317;--white:#f5f5f2;--muted:#a1a3a8;--line:#ffffff20;--x:50%;--y:50%;--mx:0deg;--my:0deg;--progress:0}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{background:var(--black);color:var(--white);font-family:Inter,Arial,sans-serif;overflow-x:hidden;line-height:1.55}
+body:before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.13;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.25'/%3E%3C/svg%3E")}
+a{color:inherit;text-decoration:none}button{font:inherit;color:inherit;cursor:pointer}.wrap{width:min(1160px,90%);margin:auto}.condensed,h1,h2,h3,.brand,.eyebrow,.btn,.nav a{font-family:'Barlow Condensed',Impact,sans-serif;text-transform:uppercase}
+#progress{position:fixed;top:0;left:0;height:3px;width:calc(var(--progress)*1%);background:var(--red);z-index:1000;box-shadow:0 0 18px var(--red)}
+.cursor-glow{position:fixed;width:360px;height:360px;border-radius:50%;pointer-events:none;z-index:0;left:var(--x);top:var(--y);transform:translate(-50%,-50%);background:radial-gradient(circle,#f3263518,transparent 68%);transition:opacity .3s}
+header{position:fixed;inset:0 0 auto;z-index:100;background:#08090bd9;border-bottom:1px solid var(--line);backdrop-filter:blur(18px);transition:.35s}
+header.scrolled{background:#08090bf5;box-shadow:0 10px 40px #0008}
+.nav{height:78px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{font-size:1.45rem;font-weight:900;letter-spacing:.04em;line-height:.8;display:flex;align-items:center;gap:10px}
+.brand-mark{width:39px;height:39px;background:var(--red);display:grid;place-items:center;clip-path:polygon(0 0,100% 0,82% 100%,0 100%);font-size:1.3rem}
+.brand small{display:block;font:700 .55rem Inter,sans-serif;letter-spacing:.28em;color:#aaa;margin-top:8px}
+.nav-links{display:flex;gap:28px;align-items:center}
+.nav-links a{font-size:1.12rem;letter-spacing:.06em;color:#c7c7c7;transition:.25s;position:relative}
+.nav-links a:after{content:"";position:absolute;left:0;bottom:-8px;width:0;height:2px;background:var(--red);transition:.25s}
+.nav-links a:hover,.nav-links a.active{color:white}.nav-links a:hover:after,.nav-links a.active:after{width:100%}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;padding:14px 22px;background:var(--red);color:white;border:1px solid var(--red);font-size:1.2rem;font-weight:800;letter-spacing:.08em;clip-path:polygon(0 0,100% 0,100% 78%,91% 100%,0 100%);transition:transform .25s,background .25s,box-shadow .25s;position:relative;overflow:hidden}
+.btn:before{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 25%,#ffffff50 50%,transparent 75%);transform:translateX(-130%);transition:.6s}
+.btn:hover:before{transform:translateX(130%)}.btn:hover{background:#c91625;box-shadow:0 10px 35px #f3263540;transform:translateY(-4px)}
+.btn.ghost{background:transparent;border-color:#ffffff66}.btn.ghost:hover{border-color:var(--red);background:#f326351a}
+.menu-toggle{display:none;background:none;border:1px solid var(--line);padding:9px 12px;font-size:1.4rem}
+.hero{min-height:100svh;display:flex;align-items:center;position:relative;overflow:hidden;padding:120px 0 70px;isolation:isolate}
+.hero-bg{position:absolute;inset:0;z-index:-2;background:linear-gradient(90deg,#050607f5 0%,#050607c9 48%,#05060750 100%),linear-gradient(0deg,#08090b 0%,transparent 35%),url('https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?auto=format&fit=crop&w=2000&q=90') center 35%/cover;transform:scale(1.08) translate3d(calc(var(--tilt-x,0)*-1px),calc(var(--tilt-y,0)*-1px),0);transition:transform .25s}
+.hero:after{content:"FIGHT";position:absolute;right:-2vw;bottom:-.25em;z-index:-1;font:900 clamp(9rem,25vw,25rem)/.8 'Barlow Condensed';color:#ffffff08;pointer-events:none}
+.hero-content{max-width:760px;position:relative}
+.eyebrow{font-size:1rem;color:var(--red);letter-spacing:.28em;font-weight:800;display:flex;align-items:center;gap:12px;margin-bottom:18px}
+.eyebrow:before{content:"";width:34px;height:2px;background:var(--red)}
+h1{font-size:clamp(4.6rem,12vw,10rem);line-height:.78;letter-spacing:-.035em;font-weight:900;text-shadow:0 10px 35px #0008}
+h1 .stroke{-webkit-text-stroke:1.5px #fff;color:transparent}
+h1 .red{color:var(--red);display:inline-block;animation:glitch 5s infinite}
+.hero-desc{font-size:clamp(1rem,2vw,1.2rem);color:#d0d0d0;max-width:550px;margin:30px 0 32px}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+.hero-meta{display:flex;gap:35px;margin-top:58px;padding-top:23px;border-top:1px solid #ffffff30;max-width:590px}
+.meta strong{font:800 2rem 'Barlow Condensed';display:block}.meta span{font-size:.68rem;color:#aaa;letter-spacing:.15em;text-transform:uppercase}
+.scroll-cue{position:absolute;right:5%;bottom:50px;writing-mode:vertical-rl;color:#aaa;font:700 .8rem 'Barlow Condensed';letter-spacing:.2em;display:flex;align-items:center;gap:12px}
+.scroll-cue:after{content:"";height:55px;width:1px;background:var(--red);animation:scrollline 1.5s infinite}
+section{padding:115px 0;position:relative}
+.section-top{display:flex;justify-content:space-between;align-items:end;gap:25px;margin-bottom:45px}
+.kicker{color:var(--red);font:800 .9rem 'Barlow Condensed';letter-spacing:.24em;text-transform:uppercase;margin-bottom:12px}
+h2{font-size:clamp(3rem,7vw,6rem);line-height:.88;letter-spacing:-.025em}
+h2 em{font-style:normal;color:var(--red)}
+.section-copy{max-width:390px;color:var(--muted)}
+.disciplines{background:linear-gradient(180deg,#08090b,#101115)}
+.discipline-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.discipline{height:410px;position:relative;overflow:hidden;border:1px solid var(--line);background:#181818;isolation:isolate;transform-style:preserve-3d;transition:border-color .4s,transform .3s}
+.discipline:before{content:"";position:absolute;inset:0;z-index:-2;background:var(--photo) center/cover;transition:transform .8s,filter .5s;filter:grayscale(1) brightness(.65)}
+.discipline:after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(0deg,#050607f5 0%,#05060720 75%),linear-gradient(135deg,#f3263530,transparent 55%)}
+.discipline:hover{border-color:var(--red);transform:translateY(-10px)}.discipline:hover:before{transform:scale(1.12);filter:grayscale(.2) brightness(.8)}
+.discipline-content{position:absolute;inset:auto 25px 25px;transform:translateZ(30px)}
+.discipline .number{font:800 1rem 'Barlow Condensed';color:var(--red);letter-spacing:.2em}
+.discipline h3{font-size:3.5rem;line-height:1;margin:8px 0}
+.discipline p{color:#c4c4c4;font-size:.9rem;max-width:270px}
+.discipline .arrow{position:absolute;right:25px;bottom:27px;font-size:1.6rem;color:var(--red);transition:.3s}.discipline:hover .arrow{transform:translate(5px,-5px)}
+.about{background:#111317;overflow:hidden}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:70px}
+.about-visual{height:570px;position:relative}
+.about-photo{position:absolute;inset:0 35px 35px 0;background:url('https://images.unsplash.com/photo-1517438322307-e67111335449?auto=format&fit=crop&w=1100&q=90') center/cover;filter:grayscale(.8);clip-path:polygon(0 0,100% 0,100% 87%,87% 100%,0 100%)}
+.about-visual:after{content:"";position:absolute;inset:25px 10px 10px 25px;border:2px solid var(--red);z-index:0;pointer-events:none}
+.about-stamp{position:absolute;right:0;bottom:0;background:var(--red);padding:20px 24px;font:900 2rem/.9 'Barlow Condensed';z-index:2;transform:rotate(-4deg)}
+.about-text p{color:var(--muted);margin:22px 0}
+.feature-list{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:30px 0}
+.feature{display:flex;align-items:center;gap:12px;font-size:.9rem}.feature b{color:var(--red);font-size:1.3rem}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:35px;padding-top:25px;border-top:1px solid var(--line)}
+.stat strong{font:900 3rem/.9 'Barlow Condensed';display:block}.stat span{font-size:.68rem;color:#999;letter-spacing:.12em;text-transform:uppercase}
+.schedule{background:#08090b}
+.schedule-shell{display:grid;grid-template-columns:.8fr 1.2fr;gap:50px;align-items:start}
+.schedule-intro p{color:var(--muted);margin:20px 0}
+.day-tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px}
+.day-tab{background:#15171c;border:1px solid var(--line);padding:11px 16px;font:700 1rem 'Barlow Condensed';text-transform:uppercase;transition:.2s}
+.day-tab.active,.day-tab:hover{background:var(--red);border-color:var(--red)}
+.class-list{display:grid;gap:10px}
+.class-row{display:grid;grid-template-columns:100px 1fr auto;align-items:center;gap:20px;padding:20px;background:#121419;border:1px solid var(--line);transition:.25s}
+.class-row:hover{border-color:#f3263580;transform:translateX(7px)}
+.class-time{font:800 1.5rem 'Barlow Condensed';color:var(--red)}
+.class-name{font-weight:800;text-transform:uppercase}.class-type{font-size:.8rem;color:#999}
+.class-level{font-size:.7rem;color:#ccc;border:1px solid #ffffff35;padding:5px 8px;text-transform:uppercase}
+.plans{background:#111317}
+.plan-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px;align-items:stretch}
+.plan{position:relative;padding:32px 27px;background:#090a0d;border:1px solid var(--line);transition:.35s;overflow:hidden}
+.plan:hover{transform:translateY(-9px);border-color:var(--red);box-shadow:0 20px 55px #0008}
+.plan.popular{border-color:var(--red);background:linear-gradient(150deg,#261014,#0b0c0f 65%)}
+.plan-tag{font:800 .85rem 'Barlow Condensed';letter-spacing:.18em;color:var(--red)}
+.plan h3{font-size:2.3rem;margin:8px 0}
+.plan-price{font:900 3.6rem 'Barlow Condensed';margin:20px 0 0}.plan-price small{font:500 .85rem Inter;color:#999}
+.plan p{font-size:.88rem;color:#aaa;margin:10px 0 20px}
+.plan ul{list-style:none;margin:22px 0 28px}.plan li{padding:10px 0;border-bottom:1px solid #ffffff12;color:#ddd;font-size:.87rem}.plan li:before{content:"+";color:var(--red);font-weight:900;margin-right:10px}
+.plan .btn{width:100%}
+.plan-note{font-size:.72rem;color:#8b8d92;margin-top:22px}
+.experience{min-height:440px;display:grid;place-items:center;text-align:center;overflow:hidden;background:linear-gradient(#08090bd9,#08090bd9),url('https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=1800&q=90') center/cover fixed}
+.experience h2{font-size:clamp(4rem,10vw,8rem)}.experience p{color:#bbb;max-width:550px;margin:22px auto 30px}
+.contact{background:#08090b}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px}
+.contact-info p{color:#aaa;margin:18px 0 28px;max-width:460px}
+.contact-box{display:grid;gap:14px}
+.contact-item{padding:17px 20px;border:1px solid var(--line);background:#111317}
+.contact-item small{display:block;color:var(--red);font:700 .8rem 'Barlow Condensed';letter-spacing:.15em;text-transform:uppercase}
+.contact-item strong{font-size:1rem}
+.map-box{min-height:360px;display:grid;place-items:center;text-align:center;padding:25px;border:1px dashed #ffffff40;background:radial-gradient(circle at center,#f3263512,transparent 65%),#101216}
+.map-box .map-icon{font-size:3rem;color:var(--red)}
+footer{padding:30px 0;border-top:1px solid var(--line);color:#85878c;font-size:.78rem}
+.footer-row{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.reveal{opacity:0;transform:translateY(45px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.delay-1{transition-delay:.12s}.delay-2{transition-delay:.24s}.delay-3{transition-delay:.36s}
+.floating-top{position:fixed;right:22px;bottom:22px;width:46px;height:46px;border:1px solid #ffffff50;background:#111c;color:white;z-index:50;opacity:0;pointer-events:none;transform:translateY(15px);transition:.3s;font-size:1.2rem}
+.floating-top.show{opacity:1;pointer-events:auto;transform:translateY(0)}
+.motion-btn{position:fixed;left:18px;bottom:18px;z-index:60;border:1px solid #ffffff40;background:#101216dd;backdrop-filter:blur(12px);padding:10px 13px;font:700 .85rem 'Barlow Condensed';letter-spacing:.1em;text-transform:uppercase}
+.motion-btn span{color:var(--red);margin-right:7px}
+@keyframes glitch{0%,92%,100%{text-shadow:none;transform:translateX(0)}93%{text-shadow:3px 0 #00e5ff,-3px 0 #f32635;transform:translateX(2px)}95%{text-shadow:-3px 0 #00e5ff,3px 0 #f32635;transform:translateX(-2px)}}
+@keyframes scrollline{0%,100%{transform:scaleY(.5);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}}
+@media(orientation:landscape) and (max-height:550px){.hero{min-height:720px}.hero-content{max-width:620px}.hero h1{font-size:clamp(4rem,10vh,6rem)}.hero-meta{margin-top:25px}.scroll-cue{display:none}}
+@media(max-width:900px){.nav-links{gap:15px}.nav-links a{font-size:1rem}.nav-cta{display:none}.discipline{height:350px}.about-grid{gap:35px}.schedule-shell{grid-template-columns:1fr}.contact-grid{gap:25px}}
+@media(max-width:700px){.nav{height:68px}.menu-toggle{display:block}.nav-links{position:absolute;top:68px;left:0;right:0;display:flex;flex-direction:column;gap:0;background:#090a0bf7;max-height:0;overflow:hidden;transition:max-height .4s;border-bottom:1px solid transparent}.nav-links.open{max-height:360px;border-color:var(--line)}.nav-links a{width:100%;padding:15px 5%;border-top:1px solid #ffffff10}.nav-links a:after{display:none}.hero{min-height:850px;min-height:100svh}.hero-bg{background-position:58% center}.hero-meta{gap:20px}.meta strong{font-size:1.7rem}.section-top{display:block}.section-copy{margin-top:20px}.discipline-grid,.plan-grid{grid-template-columns:1fr}.discipline{height:420px}.about-grid{grid-template-columns:1fr}.about-visual{height:390px;order:2}.feature-list{gap:13px}.stats{gap:8px}.stat strong{font-size:2.4rem}.class-row{grid-template-columns:75px 1fr;gap:10px}.class-level{grid-column:2;justify-self:start}.experience{background-attachment:scroll}.contact-grid{grid-template-columns:1fr}.map-box{min-height:250px}.motion-btn{bottom:12px;left:12px}}
+@media(orientation:landscape) and (max-width:900px){.hero{min-height:680px}.hero-bg{background-position:center 42%}.hero-content{max-width:640px}.hero h1{font-size:clamp(4rem,13vh,7rem)}.hero-meta{margin-top:28px}.scroll-cue{display:none}.nav-links.open{max-height:75vh;overflow:auto}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}.reveal{opacity:1;transform:none}}
 </style>
 </head>
 <body>
-<header><nav class="wrap"><a class="brand" href="#inicio"><b>MF</b>MMA FIGHTERS<small>TRAINING CENTER</small></a><div class="links"><a href="#disciplinas">Disciplinas</a><a href="#nosotros">Nosotros</a><a href="#horarios">Horarios</a><a href="#planes">Planes</a><a href="#contacto">Contacto</a></div><a class="btn" href="#contacto">CONTÁCTANOS ↗</a></nav></header>
+<div id="progress"></div><div class="cursor-glow"></div>
+<header id="header"><nav class="nav wrap">
+<a class="brand" href="#inicio"><span class="brand-mark">MF</span><span>MMA FIGHTERS<small>TRAINING CENTER</small></span></a>
+<div class="nav-links" id="navLinks"><a href="#disciplinas">Disciplinas</a><a href="#nosotros">Nosotros</a><a href="#horarios">Horarios</a><a href="#planes">Planes</a><a href="#contacto">Contacto</a></div>
+<a class="btn nav-cta" href="#contacto">ÚNETE AHORA ↗</a><button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">☰</button>
+</nav></header>
 <main>
-<section class="hero" id="inicio"><div class="wrap"><div class="hero-copy"><div class="eyebrow">Disciplina · Fuerza · Constancia</div><h1>Entrena.<br><span>Supérate.</span><br>Repite.</h1><p>Desarrolla tu fuerza, técnica y confianza. Encuentra tu disciplina y forma parte de una comunidad que te impulsa a mejorar.</p><div class="actions"><a class="btn" href="#planes">CONOCE LOS PLANES</a><a class="btn outline" href="#horarios">VER HORARIOS</a></div></div></div></section>
-<section id="disciplinas"><div class="wrap"><div class="head"><div class="eyebrow">Encuentra tu camino</div><h2>Entrena a tu manera. <span class="red">Supera tus límites.</span></h2><p>Una presentación de las disciplinas que podrían mostrarse en el sitio oficial. La oferta debe confirmarse con el gimnasio.</p></div><div class="cards"><article class="discipline" style="--photo:url('https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?auto=format&fit=crop&w=900&q=80')"><h3>MMA</h3><p>Técnica, coordinación y preparación integral.</p></article><article class="discipline" style="--photo:url('https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?auto=format&fit=crop&w=900&q=80')"><h3>Boxeo</h3><p>Movimiento, precisión y condición física.</p></article><article class="discipline" style="--photo:url('https://images.unsplash.com/photo-1599058917212-d750089bc07e?auto=format&fit=crop&w=900&q=80')"><h3>Acondicionamiento</h3><p>Fuerza, resistencia y trabajo físico.</p></article></div></div></section>
-<section class="about" id="nosotros"><div class="wrap about-grid"><div class="about-photo" role="img" aria-label="Entrenamiento deportivo"></div><div><div class="eyebrow">Más que entrenar</div><h2>Construye tu mejor <span class="red">versión.</span></h2><p>Un espacio para aprender, mejorar y mantenerte en movimiento. Cada entrenamiento es una oportunidad para desarrollar disciplina y avanzar hacia tus objetivos.</p><div class="ticks"><span>Entrenamiento guiado</span><span>Ambiente de respeto</span><span>Progreso constante</span><span>Comunidad deportiva</span></div><a class="btn" href="#contacto">SOLICITAR INFORMACIÓN</a></div></div></section>
-<section id="horarios"><div class="wrap"><div class="head"><div class="eyebrow">Organiza tu semana</div><h2>Horarios de <span class="red">entrenamiento.</span></h2><p>Los horarios se muestran como espacios editables hasta confirmar la programación oficial.</p></div><div class="cards schedule"><article><h3>Mañana</h3><p>Sesiones de entrenamiento</p><div class="line"><span>Lunes a viernes</span><b>Por confirmar</b></div><div class="line"><span>Clases</span><b>Consultar</b></div></article><article><h3>Tarde</h3><p>Sesiones de entrenamiento</p><div class="line"><span>Lunes a viernes</span><b>Por confirmar</b></div><div class="line"><span>Clases</span><b>Consultar</b></div></article><article><h3>Fin de semana</h3><p>Grupos y sesiones especiales</p><div class="line"><span>Sábado</span><b>Por confirmar</b></div><div class="line"><span>Disponibilidad</span><b>Consultar</b></div></article></div></div></section>
-<section class="plans" id="planes"><div class="wrap"><div class="head"><div class="eyebrow">Elige tu ritmo</div><h2>Planes para <span class="red">avanzar.</span></h2><p>Los precios y beneficios oficiales se agregarán después de validar la información con MMA Fighters.</p></div><div class="cards"><article class="plan"><h3>Plan básico</h3><div class="price">$___ <small>/ mes</small></div><p>Una opción para comenzar.</p><ul><li>Acceso según plan contratado</li><li>Horarios disponibles</li><li>Atención en recepción</li></ul><a class="btn" href="#contacto">CONSULTAR</a></article><article class="plan featured"><span class="label">Opción destacada</span><h3>Plan completo</h3><div class="price">$___ <small>/ mes</small></div><p>Más opciones para tu entrenamiento.</p><ul><li>Acceso por confirmar</li><li>Clases incluidas por confirmar</li><li>Atención en recepción</li></ul><a class="btn" href="#contacto">CONSULTAR</a></article><article class="plan"><h3>Plan especial</h3><div class="price">$___ <small>/ mes</small></div><p>Consulta beneficios disponibles.</p><ul><li>Beneficios por confirmar</li><li>Disponibilidad por consultar</li><li>Atención personalizada</li></ul><a class="btn" href="#contacto">CONSULTAR</a></article></div><p class="note">Demostración comercial: precios, horarios y beneficios son campos de ejemplo. No representan información oficial ni permiten realizar pagos.</p></div></section>
-<section class="cta"><div class="wrap"><div class="eyebrow">Da el primer paso</div><h2>Tu entrenamiento<br>comienza <span class="red">hoy.</span></h2><p>¿Quieres conocer las clases, horarios o mensualidades? Contacta al equipo de MMA Fighters.</p><a class="btn wa" href="#">HABLAR POR WHATSAPP ↗</a></div></section>
-<section id="contacto"><div class="wrap"><div class="head"><div class="eyebrow">Estamos para ayudarte</div><h2>Visítanos o <span class="red">contáctanos.</span></h2><p>Consulta la ubicación, disponibilidad de clases y proceso de inscripción.</p></div><div class="contact"><article><h3>MMA Fighters</h3><p><b>Dirección:</b> Por agregar</p><p><b>Teléfono:</b> Por agregar</p><p><b>Atención:</b> Consulta horarios con recepción.</p><br><a class="btn wa" href="#">SOLICITAR UBICACIÓN</a></article><div class="map">MAPA DEL GIMNASIO<br>Se integrará Google Maps con la dirección exacta.</div></div></div></section>
+<section class="hero" id="inicio"><div class="hero-bg"></div><div class="wrap"><div class="hero-content">
+<div class="eyebrow">No limits · No excuses</div><h1>TRAIN<br><span class="stroke">HARD.</span><br><span class="red">FIGHT</span><br>SMART.</h1>
+<p class="hero-desc">No vienes a ser el mismo. Vienes a construir una versión más fuerte, más disciplinada y más segura de ti.</p>
+<div class="hero-actions"><a class="btn" href="#disciplinas">EXPLORA EL GYM <span>↗</span></a><a class="btn ghost" href="#horarios">VER ENTRENAMIENTOS</a></div>
+<div class="hero-meta"><div class="meta"><strong>01</strong><span>Disciplina</span></div><div class="meta"><strong>02</strong><span>Constancia</span></div><div class="meta"><strong>∞</strong><span>Evolución</span></div></div>
+</div></div><a class="scroll-cue" href="#disciplinas">SCROLL TO EXPLORE</a></section>
+
+<section class="disciplines" id="disciplinas"><div class="wrap">
+<div class="section-top reveal"><div><div class="kicker">Choose your fight</div><h2>FIND YOUR<br><em>STRENGTH.</em></h2></div><p class="section-copy">Cada disciplina representa un reto distinto. Encuentra el entrenamiento que te mueve y comienza a superar tus propios límites.</p></div>
+<div class="discipline-grid">
+<article class="discipline reveal" style="--photo:url('https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?auto=format&fit=crop&w=1000&q=85')"><div class="discipline-content"><span class="number">01 / COMBAT</span><h3>MMA</h3><p>Técnica, estrategia y preparación integral.</p></div><span class="arrow">↗</span></article>
+<article class="discipline reveal delay-1" style="--photo:url('https://images.unsplash.com/photo-1517438322307-e67111335449?auto=format&fit=crop&w=1000&q=85')"><div class="discipline-content"><span class="number">02 / STRIKING</span><h3>BOXEO</h3><p>Velocidad, precisión y control del movimiento.</p></div><span class="arrow">↗</span></article>
+<article class="discipline reveal delay-2" style="--photo:url('https://images.unsplash.com/photo-1599058917212-d750089bc07e?auto=format&fit=crop&w=1000&q=85')"><div class="discipline-content"><span class="number">03 / CONDITIONING</span><h3>FITNESS</h3><p>Fuerza, resistencia y acondicionamiento físico.</p></div><span class="arrow">↗</span></article>
+</div><p class="plan-note">Disciplinas mostradas como concepto visual. Confirmar oferta real del gimnasio antes de publicar.</p>
+</div></section>
+
+<section class="about" id="nosotros"><div class="wrap about-grid">
+<div class="about-visual reveal"><div class="about-photo"></div><div class="about-stamp">BUILT<br>NOT BORN.</div></div>
+<div class="about-text reveal delay-1"><div class="kicker">More than a gym</div><h2>YOUR<br>WORK.<br><em>YOUR LEGACY.</em></h2><p>Un lugar para trabajar por tus metas, aprender nuevas habilidades y desarrollar disciplina dentro y fuera del entrenamiento.</p>
+<div class="feature-list"><div class="feature"><b>✳</b> Entrenamiento guiado</div><div class="feature"><b>✳</b> Comunidad</div><div class="feature"><b>✳</b> Progreso constante</div><div class="feature"><b>✳</b> Actitud y respeto</div></div>
+<a class="btn" href="#contacto">CONOCE MMA FIGHTERS ↗</a>
+<div class="stats"><div class="stat"><strong data-count="100" data-suffix="%">0</strong><span>Actitud</span></div><div class="stat"><strong data-count="1" data-suffix=" TEAM">0</strong><span>Comunidad</span></div><div class="stat"><strong data-count="∞" data-suffix="">∞</strong><span>Potencial</span></div></div>
+</div></div></section>
+
+<section class="schedule" id="horarios"><div class="wrap schedule-shell">
+<div class="schedule-intro reveal"><div class="kicker">Make it count</div><h2>YOUR<br><em>TIME.</em></h2><p>Consulta los horarios de entrenamiento y encuentra el momento ideal para comenzar. Esta sección puede conectarse con la programación real del gimnasio.</p><a class="btn ghost" href="#contacto">PREGUNTAR HORARIOS ↗</a></div>
+<div class="reveal delay-1"><div class="day-tabs" role="tablist"><button class="day-tab active" data-day="lunes">Lunes</button><button class="day-tab" data-day="martes">Martes</button><button class="day-tab" data-day="miercoles">Miércoles</button><button class="day-tab" data-day="jueves">Jueves</button><button class="day-tab" data-day="viernes">Viernes</button><button class="day-tab" data-day="sabado">Sábado</button></div><div class="class-list" id="classList" aria-live="polite"></div><p class="plan-note">Horarios ilustrativos; sustituir por el calendario confirmado de MMA Fighters.</p></div>
+</div></section>
+
+<section class="plans" id="planes"><div class="wrap">
+<div class="section-top reveal"><div><div class="kicker">Choose your level</div><h2>COMMIT TO<br><em>YOURSELF.</em></h2></div><p class="section-copy">Conoce las opciones de entrenamiento. Los planes, precios y beneficios se personalizan con la información oficial del gimnasio.</p></div>
+<div class="plan-grid">
+<article class="plan reveal"><span class="plan-tag">01 / START</span><h3>STARTER</h3><div class="plan-price">Consultar <small>/ mensualidad</small></div><p>El primer paso para comenzar tu proceso.</p><ul><li>Información de inscripción</li><li>Consulta de clases disponibles</li><li>Atención en recepción</li></ul><a class="btn ghost" href="#contacto">CONSULTAR PLAN ↗</a></article>
+<article class="plan popular reveal delay-1"><span class="plan-tag">02 / MOST CHOSEN</span><h3>FIGHTER</h3><div class="plan-price">Consultar <small>/ mensualidad</small></div><p>Una opción para mantener la constancia.</p><ul><li>Beneficios por confirmar</li><li>Horarios disponibles</li><li>Atención personalizada</li></ul><a class="btn" href="#contacto">QUIERO INFORMACIÓN ↗</a></article>
+<article class="plan reveal delay-2"><span class="plan-tag">03 / ALL IN</span><h3>ELITE</h3><div class="plan-price">Consultar <small>/ mensualidad</small></div><p>Consulta las alternativas disponibles.</p><ul><li>Beneficios por confirmar</li><li>Opciones de entrenamiento</li><li>Atención en recepción</li></ul><a class="btn ghost" href="#contacto">CONSULTAR PLAN ↗</a></article>
+</div><p class="plan-note">Los nombres son parte del concepto de diseño. No se muestran precios ni beneficios inventados.</p>
+</div></section>
+
+<section class="experience"><div class="wrap reveal"><div class="kicker" style="justify-content:center">The next round starts now</div><h2>NO SHORTCUTS.<br><em>JUST WORK.</em></h2><p>Tu siguiente nivel no aparece por casualidad. Empieza con una decisión y un entrenamiento a la vez.</p><a class="btn" href="#contacto">DA EL PRIMER PASO ↗</a></div></section>
+
+<section class="contact" id="contacto"><div class="wrap contact-grid">
+<div class="contact-info reveal"><div class="kicker">Get in touch</div><h2>LET'S<br><em>GO.</em></h2><p>¿Quieres conocer las clases, mensualidades o ubicación? Ponte en contacto con el equipo de MMA Fighters.</p><a class="btn" id="whatsappBtn" href="#contacto">CONTACTAR POR WHATSAPP ↗</a></div>
+<div class="contact-box reveal delay-1"><div class="contact-item"><small>Ubicación</small><strong>Dirección por confirmar</strong></div><div class="contact-item"><small>Teléfono / WhatsApp</small><strong>Número por confirmar</strong></div><div class="contact-item"><small>Horarios de atención</small><strong>Consultar con recepción</strong></div><div class="map-box"><div><div class="map-icon">⌖</div><h3 class="condensed">FIND YOUR GYM</h3><p style="color:#999;font-size:.85rem">Aquí se integrará el mapa con la ubicación exacta.</p></div></div></div>
+</div></section>
 </main>
-<footer><div class="wrap">© <span id="year"></span> MMA Fighters · Propuesta de Gámez Desarrollo Web</div></footer>
+<footer><div class="wrap footer-row"><span>© <span id="year"></span> MMA FIGHTERS · TRAINING CENTER</span><span>Concepto web por <b style="color:#fff">GÁMEZ DESARROLLO WEB</b></span><a href="#inicio">VOLVER ARRIBA ↑</a></div></footer>
+<button class="floating-top" id="toTop" aria-label="Volver arriba">↑</button>
+<button class="motion-btn" id="motionBtn"><span>✦</span>Activar efecto giroscópico</button>
 <script>
-const WHATSAPP = ""; // Agregar el número oficial antes de activar WhatsApp.
-const mensaje = encodeURIComponent("Hola, me interesa conocer los planes y horarios de MMA Fighters.");
-document.querySelectorAll(".wa").forEach(b => { if (WHATSAPP) { b.href = "https://wa.me/" + WHATSAPP + "?text=" + mensaje; } else { b.href = "#contacto"; } });
-document.getElementById("year").textContent = new Date().getFullYear();
+const WHATSAPP_NUMBER = ""; // Agregar el número oficial en formato internacional, solo dígitos.
+const $ = (s,root=document) => root.querySelector(s);
+const $$ = (s,root=document) => [...root.querySelectorAll(s)];
+$("#year").textContent = new Date().getFullYear();
+
+// Barra de progreso, cabecera y botón volver arriba.
+function onScroll(){
+ const max=document.documentElement.scrollHeight-innerHeight;
+ document.documentElement.style.setProperty("--progress",max>0?(scrollY/max*100):0);
+ $("#header").classList.toggle("scrolled",scrollY>30);
+ $("#toTop").classList.toggle("show",scrollY>500);
+}
+addEventListener("scroll",onScroll,{passive:true});onScroll();
+$("#toTop").addEventListener("click",()=>scrollTo({top:0,behavior:"smooth"}));
+
+// Aparición progresiva al entrar en pantalla.
+const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{
+ if(entry.isIntersecting){entry.target.classList.add("visible");observer.unobserve(entry.target);}
+}),{threshold:.12});
+$$(".reveal").forEach(el=>observer.observe(el));
+
+// Menú móvil.
+$("#menuToggle").addEventListener("click",()=>{
+ const opened=$("#navLinks").classList.toggle("open");
+ $("#menuToggle").textContent=opened?"×":"☰";
+});
+$$(".nav-links a").forEach(a=>a.addEventListener("click",()=>{
+ $("#navLinks").classList.remove("open");$("#menuToggle").textContent="☰";
+}));
+
+// Navegación activa por sección.
+const sections=$$("main section[id]");
+const navObserver=new IntersectionObserver(entries=>entries.forEach(e=>{
+ if(e.isIntersecting){$$(".nav-links a").forEach(a=>a.classList.toggle("active",a.getAttribute("href")==="#"+e.target.id));}
+}),{rootMargin:"-35% 0px -55% 0px"});
+sections.forEach(s=>navObserver.observe(s));
+
+// Horarios interactivos: contenido de demostración, no calendario oficial.
+const scheduleData={
+ lunes:[["16:00","MMA","Técnica y fundamentos"],["17:30","Boxeo","Trabajo técnico"],["19:00","Acondicionamiento","Preparación física"]],
+ martes:[["16:00","Boxeo","Técnica y desplazamientos"],["17:30","MMA","Entrenamiento general"],["19:00","MMA","Práctica guiada"]],
+ miercoles:[["16:00","MMA","Técnica y fundamentos"],["17:30","Acondicionamiento","Preparación física"],["19:00","Boxeo","Trabajo técnico"]],
+ jueves:[["16:00","Boxeo","Técnica y desplazamientos"],["17:30","MMA","Entrenamiento general"],["19:00","Acondicionamiento","Preparación física"]],
+ viernes:[["16:00","MMA","Técnica y fundamentos"],["17:30","Boxeo","Trabajo técnico"],["19:00","MMA","Práctica guiada"]],
+ sabado:[["09:00","Entrenamiento","Sesión grupal"],["10:30","Acondicionamiento","Preparación física"]]
+};
+function renderDay(day){
+ $("#classList").innerHTML=scheduleData[day].map(c=>'<article class="class-row"><div class="class-time">'+c[0]+'</div><div><div class="class-name">'+c[1]+'</div><div class="class-type">'+c[2]+'</div></div><span class="class-level">Consultar</span></article>').join("");
+}
+renderDay("lunes");
+$$(".day-tab").forEach(btn=>btn.addEventListener("click",()=>{
+ $$(".day-tab").forEach(b=>b.classList.toggle("active",b===btn));renderDay(btn.dataset.day);
+}));
+
+// Contadores al aparecer.
+const countObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{
+ if(entry.isIntersecting){
+ const el=entry.target,target=Number(el.dataset.count);
+ if(Number.isFinite(target)){let start=0;const duration=1100,begin=performance.now();
+ function tick(now){const p=Math.min((now-begin)/duration,1);el.textContent=Math.round(target*(1-Math.pow(1-p,3)))+(el.dataset.suffix||"");if(p<1)requestAnimationFrame(tick);}
+ requestAnimationFrame(tick);}
+ countObserver.unobserve(el);
+ }
+}),{threshold:.7});
+$$("[data-count]").forEach(el=>countObserver.observe(el));
+
+// Movimiento sutil de fondo y tarjetas en equipos con mouse.
+if(matchMedia("(hover:hover) and (pointer:fine)").matches){
+ addEventListener("pointermove",e=>{
+ document.documentElement.style.setProperty("--x",e.clientX+"px");
+ document.documentElement.style.setProperty("--y",e.clientY+"px");
+ const x=(e.clientX/innerWidth-.5)*2,y=(e.clientY/innerHeight-.5)*2;
+ document.documentElement.style.setProperty("--tilt-x",x*7);
+ document.documentElement.style.setProperty("--tilt-y",y*7);
+ },{passive:true});
+ $$(".discipline").forEach(card=>{
+ card.addEventListener("pointermove",e=>{
+ const r=card.getBoundingClientRect(),x=(e.clientX-r.left)/r.width,y=(e.clientY-r.top)/r.height;
+ card.style.transform="perspective(900px) rotateX("+((.5-y)*7)+"deg) rotateY("+((x-.5)*8)+"deg) translateY(-7px)";
+ });
+ card.addEventListener("pointerleave",()=>card.style.transform="");
+ });
+}
+
+// Efecto de inclinación con sensores del teléfono.
+// iPhone/iPad puede requerir permiso al tocar el botón; siempre hay modo normal sin sensor.
+const motionBtn=$("#motionBtn");
+motionBtn.addEventListener("click",async()=>{
+ try{
+ if(typeof DeviceOrientationEvent==="undefined"){motionBtn.textContent="Sensor no disponible";return;}
+ if(typeof DeviceOrientationEvent.requestPermission==="function"){
+ const permission=await DeviceOrientationEvent.requestPermission();
+ if(permission!=="granted"){motionBtn.textContent="Permiso no concedido";return;}
+ }
+ addEventListener("deviceorientation",e=>{
+ if(e.gamma===null||e.beta===null)return;
+ const gx=Math.max(-25,Math.min(25,e.gamma)),by=Math.max(-25,Math.min(25,e.beta-35));
+ document.documentElement.style.setProperty("--tilt-x",gx*.45);
+ document.documentElement.style.setProperty("--tilt-y",by*.35);
+ },true);
+ motionBtn.innerHTML="<span>✦</span>Movimiento activado";
+ }catch(err){motionBtn.textContent="Sensor bloqueado por el navegador";}
+});
+
+// WhatsApp queda desactivado hasta ingresar el teléfono real del negocio.
+const wa=$("#whatsappBtn");
+if(WHATSAPP_NUMBER){wa.href="https://wa.me/"+WHATSAPP_NUMBER+"?text="+encodeURIComponent("Hola, me interesa conocer las clases y planes de MMA Fighters.");wa.target="_blank";wa.rel="noopener";}
+else{wa.addEventListener("click",e=>{e.preventDefault();alert("Esta demostración necesita el número oficial de WhatsApp para activar el contacto.");});}
 </script>
 </body>
 </html>
